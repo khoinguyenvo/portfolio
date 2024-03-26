@@ -15,5 +15,8 @@ Greetings! My name is Neil, a data enthusiast. Welcome to my Github repository s
 
 #### 4. Technologies, Tools, and Frameworkes:
 This project leverages a variety of open-source technologies (Dagster and dbt) and cloud services (GCP, AWS and Azure), with Python and SQL being the major programming languages. The final application is running on Docker to ensure scalability.
+
+![activeTix](https://github.com/khoinguyenvo/Porfolio/assets/133230440/c5faa94d-b56d-4d25-a8dc-d874f25af15c)
+
 #### 5. Github repository:
 https://github.com/khoinguyenvo/Ticketing-Platform-Data-Solution
