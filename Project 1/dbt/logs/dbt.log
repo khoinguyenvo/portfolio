@@ -1,0 +1,687 @@
+[0m04:44:28.248178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9114b290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9114b710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9114b610>]}
+
+
+============================== 04:44:28.270843 | 2951ea94-7f00-464d-9134-2ad32683da5b ==============================
+[0m04:44:28.270843 [info ] [MainThread]: Running with dbt=1.7.9
+[0m04:44:28.271666 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/home/ubuntu/workspaces/techhaus', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m04:44:28.272450 [info ] [MainThread]: dbt version: 1.7.9
+[0m04:44:28.272999 [info ] [MainThread]: python version: 3.11.8
+[0m04:44:28.273517 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m04:44:28.274033 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m04:44:28.274537 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus
+[0m04:44:28.274996 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/profiles.yml
+[0m04:44:28.275485 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt_project.yml
+[0m04:44:28.275963 [info ] [MainThread]: Configuration:
+[0m04:44:28.276402 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m04:44:28.276842 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m04:44:28.277313 [info ] [MainThread]: Required dependencies:
+[0m04:44:28.277833 [debug] [MainThread]: Executing "git --help"
+[0m04:44:28.282070 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m04:44:28.282693 [debug] [MainThread]: STDERR: "b''"
+[0m04:44:28.283139 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m04:44:28.283667 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m04:44:28.284172 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m04:44:28.284626 [info ] [MainThread]: dbt looked for a profiles.yml file in /home/ubuntu/workspaces/techhaus/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m04:44:28.285107 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/ubuntu/workspaces/techhaus/dbt_project.yml> not found
+
+[0m04:44:28.286301 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.040536094, "process_user_time": 2.984565, "process_kernel_time": 0.189304, "process_mem_max_rss": "101764", "process_out_blocks": "15096", "command_success": false, "process_in_blocks": "0"}
+[0m04:44:28.287027 [debug] [MainThread]: Command `dbt debug` failed at 04:44:28.286827 after 0.04 seconds
+[0m04:44:28.287593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9552ee90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff953f1250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff953f1610>]}
+[0m04:44:28.288134 [debug] [MainThread]: Flushing usage events
+[0m04:44:51.041213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84c18ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84c93950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84c58290>]}
+
+
+============================== 04:44:51.044727 | c4367cb4-57fc-4fc7-b6b3-3e59a6890def ==============================
+[0m04:44:51.044727 [info ] [MainThread]: Running with dbt=1.7.9
+[0m04:44:51.045507 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/ubuntu/workspaces/techhaus/logs', 'fail_fast': 'False', 'profiles_dir': '/home/ubuntu/workspaces/techhaus', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m04:44:51.046162 [info ] [MainThread]: dbt version: 1.7.9
+[0m04:44:51.046688 [info ] [MainThread]: python version: 3.11.8
+[0m04:44:51.047161 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m04:44:51.047655 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m04:44:52.592158 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus
+[0m04:44:52.592891 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/profiles.yml
+[0m04:44:52.593399 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt_project.yml
+[0m04:44:52.594385 [info ] [MainThread]: adapter type: bigquery
+[0m04:44:52.594920 [info ] [MainThread]: adapter version: 1.7.6
+[0m04:44:52.745284 [info ] [MainThread]: Configuration:
+[0m04:44:52.745968 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m04:44:52.746444 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m04:44:52.746900 [info ] [MainThread]: Required dependencies:
+[0m04:44:52.747384 [debug] [MainThread]: Executing "git --help"
+[0m04:44:52.749680 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m04:44:52.750283 [debug] [MainThread]: STDERR: "b''"
+[0m04:44:52.750724 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m04:44:52.751175 [info ] [MainThread]: Connection:
+[0m04:44:52.751682 [info ] [MainThread]:   method: service-account
+[0m04:44:52.752218 [info ] [MainThread]:   database: duckdbt-pipeline
+[0m04:44:52.752708 [info ] [MainThread]:   execution_project: duckdbt-pipeline
+[0m04:44:52.753299 [info ] [MainThread]:   schema: techhaus
+[0m04:44:52.753857 [info ] [MainThread]:   location: US
+[0m04:44:52.754320 [info ] [MainThread]:   priority: None
+[0m04:44:52.754756 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m04:44:52.755216 [info ] [MainThread]:   impersonate_service_account: None
+[0m04:44:52.755687 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m04:44:52.756161 [info ] [MainThread]:   job_retries: 1
+[0m04:44:52.756614 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m04:44:52.757059 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m04:44:52.757564 [info ] [MainThread]:   keyfile: credentials.json
+[0m04:44:52.758061 [info ] [MainThread]:   timeout_seconds: None
+[0m04:44:52.758518 [info ] [MainThread]:   client_id: None
+[0m04:44:52.758972 [info ] [MainThread]:   token_uri: None
+[0m04:44:52.759449 [info ] [MainThread]:   dataproc_region: None
+[0m04:44:52.759903 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m04:44:52.760357 [info ] [MainThread]:   gcs_bucket: None
+[0m04:44:52.760806 [info ] [MainThread]:   dataproc_batch: None
+[0m04:44:52.761347 [info ] [MainThread]: Registered adapter: bigquery=1.7.6
+[0m04:44:52.762185 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m04:44:52.762714 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:44:52.954820 [debug] [MainThread]: On debug: select 1 as id
+[0m04:44:53.709465 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=duckdbt-pipeline&j=bq:US:f7672ce7-9efb-4a28-b1ad-7bcf807a9ac8&page=queryresults
+[0m04:44:54.444329 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m04:44:54.444988 [info ] [MainThread]: [32mAll checks passed![0m
+[0m04:44:54.446089 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 3.4801695, "process_user_time": 4.32538, "process_kernel_time": 0.260083, "process_mem_max_rss": "201568", "process_out_blocks": "13504", "process_in_blocks": "0"}
+[0m04:44:54.446827 [debug] [MainThread]: Command `dbt debug` succeeded at 04:44:54.446638 after 3.48 seconds
+[0m04:44:54.447293 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m04:44:54.447840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff851dc350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88f4abd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff6e68fed0>]}
+[0m04:44:54.448390 [debug] [MainThread]: Flushing usage events
+[0m04:53:02.059303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5080c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb50829d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb5082710>]}
+
+
+============================== 04:53:02.062998 | 0b6c8688-c144-4320-be44-2bda64e2d723 ==============================
+[0m04:53:02.062998 [info ] [MainThread]: Running with dbt=1.7.9
+[0m04:53:02.063847 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m04:53:02.064547 [info ] [MainThread]: dbt version: 1.7.9
+[0m04:53:02.065088 [info ] [MainThread]: python version: 3.11.8
+[0m04:53:02.065609 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m04:53:02.066129 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m04:53:02.996226 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m04:53:02.996970 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m04:53:02.997460 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m04:53:02.998210 [info ] [MainThread]: adapter type: bigquery
+[0m04:53:02.998738 [info ] [MainThread]: adapter version: 1.7.6
+[0m04:53:03.149515 [info ] [MainThread]: Configuration:
+[0m04:53:03.150256 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m04:53:03.150749 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m04:53:03.151223 [info ] [MainThread]: Required dependencies:
+[0m04:53:03.151868 [debug] [MainThread]: Executing "git --help"
+[0m04:53:03.154104 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m04:53:03.154724 [debug] [MainThread]: STDERR: "b''"
+[0m04:53:03.155203 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m04:53:03.155725 [info ] [MainThread]: Connection:
+[0m04:53:03.156247 [info ] [MainThread]:   method: service-account
+[0m04:53:03.156731 [info ] [MainThread]:   database: duckdbt-pipeline
+[0m04:53:03.157189 [info ] [MainThread]:   execution_project: duckdbt-pipeline
+[0m04:53:03.157627 [info ] [MainThread]:   schema: techhaus
+[0m04:53:03.158114 [info ] [MainThread]:   location: US
+[0m04:53:03.158580 [info ] [MainThread]:   priority: None
+[0m04:53:03.159046 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m04:53:03.159527 [info ] [MainThread]:   impersonate_service_account: None
+[0m04:53:03.159998 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m04:53:03.160442 [info ] [MainThread]:   job_retries: 1
+[0m04:53:03.160881 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m04:53:03.161314 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m04:53:03.161788 [info ] [MainThread]:   keyfile: ./credentials.json
+[0m04:53:03.162370 [info ] [MainThread]:   timeout_seconds: None
+[0m04:53:03.162915 [info ] [MainThread]:   client_id: None
+[0m04:53:03.163421 [info ] [MainThread]:   token_uri: None
+[0m04:53:03.163897 [info ] [MainThread]:   dataproc_region: None
+[0m04:53:03.164364 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m04:53:03.164836 [info ] [MainThread]:   gcs_bucket: None
+[0m04:53:03.165299 [info ] [MainThread]:   dataproc_batch: None
+[0m04:53:03.165874 [info ] [MainThread]: Registered adapter: bigquery=1.7.6
+[0m04:53:03.166673 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m04:53:03.167219 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:53:03.167940 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: './credentials.json''
+[0m04:53:03.168562 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m04:53:03.169096 [info ] [MainThread]: [31m1 check failed:[0m
+[0m04:53:03.169596 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: './credentials.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m04:53:03.170923 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.1861445, "process_user_time": 3.572754, "process_kernel_time": 0.199818, "process_mem_max_rss": "195916", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m04:53:03.171753 [debug] [MainThread]: Command `dbt debug` failed at 04:53:03.171534 after 1.19 seconds
+[0m04:53:03.172288 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m04:53:03.172848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb509d210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ec36550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb93b2d50>]}
+[0m04:53:03.173451 [debug] [MainThread]: Flushing usage events
+[0m04:53:57.455713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92456590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92456a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff92455fd0>]}
+
+
+============================== 04:53:57.459336 | f00e6d2e-2e99-4eb8-af18-30f202731c6e ==============================
+[0m04:53:57.459336 [info ] [MainThread]: Running with dbt=1.7.9
+[0m04:53:57.460215 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m04:53:57.460945 [info ] [MainThread]: dbt version: 1.7.9
+[0m04:53:57.461543 [info ] [MainThread]: python version: 3.11.8
+[0m04:53:57.462131 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m04:53:57.462681 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m04:53:58.384079 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m04:53:58.384836 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m04:53:58.385376 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m04:53:58.386198 [info ] [MainThread]: adapter type: bigquery
+[0m04:53:58.386758 [info ] [MainThread]: adapter version: 1.7.6
+[0m04:53:58.545253 [info ] [MainThread]: Configuration:
+[0m04:53:58.546013 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m04:53:58.546539 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m04:53:58.547059 [info ] [MainThread]: Required dependencies:
+[0m04:53:58.547628 [debug] [MainThread]: Executing "git --help"
+[0m04:53:58.549884 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m04:53:58.550529 [debug] [MainThread]: STDERR: "b''"
+[0m04:53:58.551022 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m04:53:58.551732 [info ] [MainThread]: Connection:
+[0m04:53:58.552274 [info ] [MainThread]:   method: service-account
+[0m04:53:58.552769 [info ] [MainThread]:   database: duckdbt-pipeline
+[0m04:53:58.553248 [info ] [MainThread]:   execution_project: duckdbt-pipeline
+[0m04:53:58.553781 [info ] [MainThread]:   schema: techhaus
+[0m04:53:58.554382 [info ] [MainThread]:   location: US
+[0m04:53:58.554867 [info ] [MainThread]:   priority: None
+[0m04:53:58.555371 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m04:53:58.555882 [info ] [MainThread]:   impersonate_service_account: None
+[0m04:53:58.556349 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m04:53:58.556819 [info ] [MainThread]:   job_retries: 1
+[0m04:53:58.557298 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m04:53:58.557809 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m04:53:58.558307 [info ] [MainThread]:   keyfile: techhaus/credentials.json
+[0m04:53:58.558834 [info ] [MainThread]:   timeout_seconds: None
+[0m04:53:58.559309 [info ] [MainThread]:   client_id: None
+[0m04:53:58.559806 [info ] [MainThread]:   token_uri: None
+[0m04:53:58.560276 [info ] [MainThread]:   dataproc_region: None
+[0m04:53:58.560738 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m04:53:58.561202 [info ] [MainThread]:   gcs_bucket: None
+[0m04:53:58.561663 [info ] [MainThread]:   dataproc_batch: None
+[0m04:53:58.562263 [info ] [MainThread]: Registered adapter: bigquery=1.7.6
+[0m04:53:58.563137 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m04:53:58.563719 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:53:58.564359 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: 'techhaus/credentials.json''
+[0m04:53:58.565003 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m04:53:58.565536 [info ] [MainThread]: [31m1 check failed:[0m
+[0m04:53:58.566100 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: 'techhaus/credentials.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m04:53:58.567299 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.1900386, "process_user_time": 3.639387, "process_kernel_time": 0.239959, "process_mem_max_rss": "195668", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m04:53:58.568151 [debug] [MainThread]: Command `dbt debug` failed at 04:53:58.567937 after 1.19 seconds
+[0m04:53:58.568723 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m04:53:58.569268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9227ff90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9245fe90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff922d8c50>]}
+[0m04:53:58.569923 [debug] [MainThread]: Flushing usage events
+[0m04:54:43.238347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91042f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91040d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91042790>]}
+
+
+============================== 04:54:43.241913 | c37051cd-3e10-4abf-b333-e5f00c3c94fe ==============================
+[0m04:54:43.241913 [info ] [MainThread]: Running with dbt=1.7.9
+[0m04:54:43.242701 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m04:54:43.243387 [info ] [MainThread]: dbt version: 1.7.9
+[0m04:54:43.243975 [info ] [MainThread]: python version: 3.11.8
+[0m04:54:43.244491 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m04:54:43.244975 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m04:54:44.087534 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m04:54:44.088272 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m04:54:44.088769 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m04:54:44.089470 [info ] [MainThread]: adapter type: bigquery
+[0m04:54:44.090017 [info ] [MainThread]: adapter version: 1.7.6
+[0m04:54:44.236886 [info ] [MainThread]: Configuration:
+[0m04:54:44.237599 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m04:54:44.238129 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m04:54:44.238600 [info ] [MainThread]: Required dependencies:
+[0m04:54:44.239094 [debug] [MainThread]: Executing "git --help"
+[0m04:54:44.241269 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m04:54:44.241929 [debug] [MainThread]: STDERR: "b''"
+[0m04:54:44.242418 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m04:54:44.242912 [info ] [MainThread]: Connection:
+[0m04:54:44.243464 [info ] [MainThread]:   method: service-account
+[0m04:54:44.243965 [info ] [MainThread]:   database: duckdbt-pipeline
+[0m04:54:44.244435 [info ] [MainThread]:   execution_project: duckdbt-pipeline
+[0m04:54:44.244895 [info ] [MainThread]:   schema: techhaus
+[0m04:54:44.245348 [info ] [MainThread]:   location: US
+[0m04:54:44.245819 [info ] [MainThread]:   priority: None
+[0m04:54:44.246284 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m04:54:44.246737 [info ] [MainThread]:   impersonate_service_account: None
+[0m04:54:44.247174 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m04:54:44.247662 [info ] [MainThread]:   job_retries: 1
+[0m04:54:44.248128 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m04:54:44.248586 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m04:54:44.249043 [info ] [MainThread]:   keyfile: /techhaus/credentials.json
+[0m04:54:44.249493 [info ] [MainThread]:   timeout_seconds: None
+[0m04:54:44.249974 [info ] [MainThread]:   client_id: None
+[0m04:54:44.250416 [info ] [MainThread]:   token_uri: None
+[0m04:54:44.250852 [info ] [MainThread]:   dataproc_region: None
+[0m04:54:44.251286 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m04:54:44.251762 [info ] [MainThread]:   gcs_bucket: None
+[0m04:54:44.252220 [info ] [MainThread]:   dataproc_batch: None
+[0m04:54:44.252760 [info ] [MainThread]: Registered adapter: bigquery=1.7.6
+[0m04:54:44.253554 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m04:54:44.254105 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:54:44.254724 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: '/techhaus/credentials.json''
+[0m04:54:44.255335 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m04:54:44.255908 [info ] [MainThread]: [31m1 check failed:[0m
+[0m04:54:44.256410 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: '/techhaus/credentials.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m04:54:44.257519 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.0912366, "process_user_time": 3.4336, "process_kernel_time": 0.195863, "process_mem_max_rss": "196096", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m04:54:44.258312 [debug] [MainThread]: Command `dbt debug` failed at 04:54:44.258114 after 1.09 seconds
+[0m04:54:44.258822 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m04:54:44.259350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9270ce90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff910481d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff91068f50>]}
+[0m04:54:44.259982 [debug] [MainThread]: Flushing usage events
+[0m04:57:37.064406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa605ae10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa605ad50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa605aad0>]}
+
+
+============================== 04:57:37.068080 | d16f321d-a05c-4325-a8d7-c06a4db89de9 ==============================
+[0m04:57:37.068080 [info ] [MainThread]: Running with dbt=1.7.9
+[0m04:57:37.068908 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m04:57:37.069626 [info ] [MainThread]: dbt version: 1.7.9
+[0m04:57:37.070210 [info ] [MainThread]: python version: 3.11.8
+[0m04:57:37.070859 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m04:57:37.071366 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m04:57:37.907953 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m04:57:37.908682 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m04:57:37.909171 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m04:57:37.909893 [info ] [MainThread]: adapter type: bigquery
+[0m04:57:37.910384 [info ] [MainThread]: adapter version: 1.7.6
+[0m04:57:38.059028 [info ] [MainThread]: Configuration:
+[0m04:57:38.059789 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m04:57:38.060278 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m04:57:38.060763 [info ] [MainThread]: Required dependencies:
+[0m04:57:38.061288 [debug] [MainThread]: Executing "git --help"
+[0m04:57:38.063588 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m04:57:38.064199 [debug] [MainThread]: STDERR: "b''"
+[0m04:57:38.064655 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m04:57:38.065127 [info ] [MainThread]: Connection:
+[0m04:57:38.065614 [info ] [MainThread]:   method: service-account
+[0m04:57:38.066148 [info ] [MainThread]:   database: duckdbt-pipeline
+[0m04:57:38.066611 [info ] [MainThread]:   execution_project: duckdbt-pipeline
+[0m04:57:38.067068 [info ] [MainThread]:   schema: techhaus
+[0m04:57:38.067525 [info ] [MainThread]:   location: US
+[0m04:57:38.067988 [info ] [MainThread]:   priority: None
+[0m04:57:38.068427 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m04:57:38.068871 [info ] [MainThread]:   impersonate_service_account: None
+[0m04:57:38.069303 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m04:57:38.069755 [info ] [MainThread]:   job_retries: 1
+[0m04:57:38.070209 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m04:57:38.070641 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m04:57:38.071066 [info ] [MainThread]:   keyfile: credentials.json
+[0m04:57:38.071516 [info ] [MainThread]:   timeout_seconds: None
+[0m04:57:38.071975 [info ] [MainThread]:   client_id: None
+[0m04:57:38.072437 [info ] [MainThread]:   token_uri: None
+[0m04:57:38.072899 [info ] [MainThread]:   dataproc_region: None
+[0m04:57:38.073333 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m04:57:38.073803 [info ] [MainThread]:   gcs_bucket: None
+[0m04:57:38.074241 [info ] [MainThread]:   dataproc_batch: None
+[0m04:57:38.074746 [info ] [MainThread]: Registered adapter: bigquery=1.7.6
+[0m04:57:38.075530 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m04:57:38.076032 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:57:38.076587 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: 'credentials.json''
+[0m04:57:38.077154 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m04:57:38.077659 [info ] [MainThread]: [31m1 check failed:[0m
+[0m04:57:38.078196 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: 'credentials.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m04:57:38.079239 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.0876863, "process_user_time": 3.418465, "process_kernel_time": 0.220158, "process_mem_max_rss": "196148", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m04:57:38.080044 [debug] [MainThread]: Command `dbt debug` failed at 04:57:38.079845 after 1.09 seconds
+[0m04:57:38.080535 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m04:57:38.081041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa60da890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa667a7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa4e3550>]}
+[0m04:57:38.081609 [debug] [MainThread]: Flushing usage events
+[0m04:59:59.374803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f767b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f75cf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fbb19d0>]}
+
+
+============================== 04:59:59.378511 | bd9ce306-c888-44de-ac04-935975760d96 ==============================
+[0m04:59:59.378511 [info ] [MainThread]: Running with dbt=1.7.9
+[0m04:59:59.379333 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m04:59:59.380121 [info ] [MainThread]: dbt version: 1.7.9
+[0m04:59:59.380702 [info ] [MainThread]: python version: 3.11.8
+[0m04:59:59.381249 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m04:59:59.381790 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m05:00:00.187315 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m05:00:00.188096 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m05:00:00.188600 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m05:00:00.335643 [info ] [MainThread]: Configuration:
+[0m05:00:00.336347 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:00:00.336852 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:00:00.337327 [info ] [MainThread]: Required dependencies:
+[0m05:00:00.337868 [debug] [MainThread]: Executing "git --help"
+[0m05:00:00.340118 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:00:00.340744 [debug] [MainThread]: STDERR: "b''"
+[0m05:00:00.341223 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:00:00.341756 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:00:00.342257 [info ] [MainThread]: [31m1 check failed:[0m
+[0m05:00:00.342861 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "techhaus", target "dev" invalid: {'type': 'service_account', 'project_id': 'duckdbt-pipeline', 'private_key_id': '9a1e75d9a31873cdd9ed1c0147906fee9117d0c2', 'private_key': '-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCu80gBUhatLWfl\n7zvVqWxByhr2Dwp+OiZvR4X3mJsWJxtDhNimpT5MN2UujBRSn/409N4VgCQcgukW\n3GK9+nj1iKUlrqW/vuyVkiZecjpwRdT1eSp/EdyXlm2QlFjdn8fUi8p9hpD0CIKO\nxXlvGy1VAtw3/5pmGUhcINICg0jCbB65UXKxPmyLv1F6GstHBP4mBPZzP0SS8tcx\nPUf3lY4fTbK16UtS2YueCmdkhnYcnzk5+tW66ZQ1nHm5TX4KmOFvkuD6Rro3M0dA\nbYoW9C+jhbWyAaW582tTJoHeq5dW1mjAC+xg0/Spls5H9d0yj5vdDFOhjdpouHjn\nTRViMlLrAgMBAAECggEAFHQDuIfOIovlktelBqXVLrHVShatvYkd14ekmAg4JV8I\nDHI6WUKF+ydvcFbXGhEeCTc8GYZkHQ3e+Jm7qjCKC1E2LCbJYOvja9nCG5Y+J8Rk\n5m02dH70QP1IrOJIVgypMjuaPjzzswalq3xXEJARp4J7Qsliqx9h5XIUK1AJkGpz\nB0bPP4uE74pk9JMgeosnTz6xsEt8sFF+MwL5uq4qzxc4IFlMstggnS5vXF2+6RbX\nflu/zyGIuwCtmk5am17G1y8hgYMHZqtpXPH3ObD50yPLrXlGoFKB5TOLG/YjN3hB\njscgRlskFfsDpVLqIt+GJHWnE6V9wpshDMGfsMV4LQKBgQDULzXywd1YgNYE4uZO\neD46E6OYdwAp5GfAY715JxxTbfGvfsbzh93MSDTsUe6vNo3Mvh43h83R1EcqTfLi\nc6KHv93kw8QIpYxWaz+ySO5Xl73CdKhOjnQIgleR194yzit2Nf4mQdu1u8M0GpNa\nRB8bwSuVYh/jHet0h7TwsDpKFQKBgQDTE7/gawvQ7o+gR01bDjduh0SP9DMK/Agb\nPxWWZHGVcX2hGQEVvMceZl2mxYHJtfqvEtVBjoTOjV5ETJO3zfUXH+mH7AcSHlXo\nur0o3nua9AVVs9SvOwHy3blqTIltDlW5AfKsummVH5AnuRoohk3wvKpB6+bk34dQ\nTSDQFmJo/wKBgFMhG/W71khyUWcgrjJYEakXQKTfGoVPIwbRDM6GcCaPkHy9Ip0O\nweri7zkW8Hhc2zk30wbWgeCPVkJQv7PQsgCVPw39VLQ+h7jj09S5lgdjP8kLg1Uj\nonoi9sQA2uD0vTpW9PdwHfAZW+Tx9IEM51MsXzLreqq0cib5c/5ITM3xAoGAVj6p\nle7nQxVWxiycJOpoJ9dJYnBrMr/MKCXckji0WFWo+VwYH2OlEHzPI0dsQpkCtupB\nDKpJBYSp0cpgSSf0TuCRMSJ1uSd//rnedIaDhsrSKzRxYLABmdSS4CYpuM+0owVy\nvLTmUzI0Wqa9U3Wc/xJ3lrvm+fmDdoItOBkNWM0CgYEAhtBRx0PbqeHsG9y5uFMz\nV4wmmvscApjGs1eHzFXQFRt9dqCPzjc7va7K4yqI/sk1066j5/uwnWd1zqWLrISh\nbEm982lWTiEOpP7FQ7DZpEsmklLJhUYeZTVdHJAQoRP1gTz3XmkOqOkEDVfGrpMk\nxrgS9Q+uEUf1mPJDCcNbnRI=\n-----END PRIVATE KEY-----', 'client_email': 'duckdbt@duckdbt-pipeline.iam.gserviceaccount.com', 'client_id': '113072508983934244089', 'auth_uri': 'https://accounts.google.com/o/oauth2/auth', 'token_uri': 'https://oauth2.googleapis.com/token', 'auth_provider_x509_cert_url': 'https://www.googleapis.com/oauth2/v1/certs', 'client_x509_cert_url': 'https://www.googleapis.com/robot/v1/metadata/x509/duckdbt%40duckdbt-pipeline.iam.gserviceaccount.com', 'universe_domain': 'googleapis.com'} is not valid under any of the given schemas
+
+
+[0m05:00:00.344165 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.0450748, "process_user_time": 3.495143, "process_kernel_time": 0.160144, "process_mem_max_rss": "195508", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m05:00:00.344938 [debug] [MainThread]: Command `dbt debug` failed at 05:00:00.344736 after 1.05 seconds
+[0m05:00:00.345525 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f7226d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f767b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa3b07f90>]}
+[0m05:00:00.346159 [debug] [MainThread]: Flushing usage events
+[0m05:00:25.590199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac7f6bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac829650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac82b6d0>]}
+
+
+============================== 05:00:25.593946 | 2c98c706-21a5-4048-87d5-b3cf5a6c1ba8 ==============================
+[0m05:00:25.593946 [info ] [MainThread]: Running with dbt=1.7.9
+[0m05:00:25.594762 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'debug': 'False', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m05:00:25.595525 [info ] [MainThread]: dbt version: 1.7.9
+[0m05:00:25.596135 [info ] [MainThread]: python version: 3.11.8
+[0m05:00:25.596675 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m05:00:25.597243 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m05:00:26.392612 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m05:00:26.393354 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m05:00:26.393910 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m05:00:26.543453 [info ] [MainThread]: Configuration:
+[0m05:00:26.544145 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:00:26.544670 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:00:26.545142 [info ] [MainThread]: Required dependencies:
+[0m05:00:26.545651 [debug] [MainThread]: Executing "git --help"
+[0m05:00:26.548060 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:00:26.548671 [debug] [MainThread]: STDERR: "b''"
+[0m05:00:26.549140 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:00:26.549610 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:00:26.550131 [info ] [MainThread]: [31m1 check failed:[0m
+[0m05:00:26.550806 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "techhaus", target "dev" invalid: {'type': 'service_account', 'project_id': 'duckdbt-pipeline', 'private_key_id': '9a1e75d9a31873cdd9ed1c0147906fee9117d0c2', 'private_key': '-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCu80gBUhatLWfl 7zvVqWxByhr2Dwp+OiZvR4X3mJsWJxtDhNimpT5MN2UujBRSn/409N4VgCQcgukW 3GK9+nj1iKUlrqW/vuyVkiZecjpwRdT1eSp/EdyXlm2QlFjdn8fUi8p9hpD0CIKO xXlvGy1VAtw3/5pmGUhcINICg0jCbB65UXKxPmyLv1F6GstHBP4mBPZzP0SS8tcx PUf3lY4fTbK16UtS2YueCmdkhnYcnzk5+tW66ZQ1nHm5TX4KmOFvkuD6Rro3M0dA bYoW9C+jhbWyAaW582tTJoHeq5dW1mjAC+xg0/Spls5H9d0yj5vdDFOhjdpouHjn TRViMlLrAgMBAAECggEAFHQDuIfOIovlktelBqXVLrHVShatvYkd14ekmAg4JV8I DHI6WUKF+ydvcFbXGhEeCTc8GYZkHQ3e+Jm7qjCKC1E2LCbJYOvja9nCG5Y+J8Rk 5m02dH70QP1IrOJIVgypMjuaPjzzswalq3xXEJARp4J7Qsliqx9h5XIUK1AJkGpz B0bPP4uE74pk9JMgeosnTz6xsEt8sFF+MwL5uq4qzxc4IFlMstggnS5vXF2+6RbX flu/zyGIuwCtmk5am17G1y8hgYMHZqtpXPH3ObD50yPLrXlGoFKB5TOLG/YjN3hB jscgRlskFfsDpVLqIt+GJHWnE6V9wpshDMGfsMV4LQKBgQDULzXywd1YgNYE4uZO eD46E6OYdwAp5GfAY715JxxTbfGvfsbzh93MSDTsUe6vNo3Mvh43h83R1EcqTfLi c6KHv93kw8QIpYxWaz+ySO5Xl73CdKhOjnQIgleR194yzit2Nf4mQdu1u8M0GpNa RB8bwSuVYh/jHet0h7TwsDpKFQKBgQDTE7/gawvQ7o+gR01bDjduh0SP9DMK/Agb PxWWZHGVcX2hGQEVvMceZl2mxYHJtfqvEtVBjoTOjV5ETJO3zfUXH+mH7AcSHlXo ur0o3nua9AVVs9SvOwHy3blqTIltDlW5AfKsummVH5AnuRoohk3wvKpB6+bk34dQ TSDQFmJo/wKBgFMhG/W71khyUWcgrjJYEakXQKTfGoVPIwbRDM6GcCaPkHy9Ip0O weri7zkW8Hhc2zk30wbWgeCPVkJQv7PQsgCVPw39VLQ+h7jj09S5lgdjP8kLg1Uj onoi9sQA2uD0vTpW9PdwHfAZW+Tx9IEM51MsXzLreqq0cib5c/5ITM3xAoGAVj6p le7nQxVWxiycJOpoJ9dJYnBrMr/MKCXckji0WFWo+VwYH2OlEHzPI0dsQpkCtupB DKpJBYSp0cpgSSf0TuCRMSJ1uSd//rnedIaDhsrSKzRxYLABmdSS4CYpuM+0owVy vLTmUzI0Wqa9U3Wc/xJ3lrvm+fmDdoItOBkNWM0CgYEAhtBRx0PbqeHsG9y5uFMz V4wmmvscApjGs1eHzFXQFRt9dqCPzjc7va7K4yqI/sk1066j5/uwnWd1zqWLrISh bEm982lWTiEOpP7FQ7DZpEsmklLJhUYeZTVdHJAQoRP1gTz3XmkOqOkEDVfGrpMk xrgS9Q+uEUf1mPJDCcNbnRI= -----END PRIVATE KEY-----', 'client_email': 'duckdbt@duckdbt-pipeline.iam.gserviceaccount.com', 'client_id': '113072508983934244089', 'auth_uri': 'https://accounts.google.com/o/oauth2/auth', 'token_uri': 'https://oauth2.googleapis.com/token', 'auth_provider_x509_cert_url': 'https://www.googleapis.com/oauth2/v1/certs', 'client_x509_cert_url': 'https://www.googleapis.com/robot/v1/metadata/x509/duckdbt%40duckdbt-pipeline.iam.gserviceaccount.com', 'universe_domain': 'googleapis.com'} is not valid under any of the given schemas
+
+
+[0m05:00:26.552081 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.0357101, "process_user_time": 3.395585, "process_kernel_time": 0.203975, "process_mem_max_rss": "195600", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m05:00:26.552817 [debug] [MainThread]: Command `dbt debug` failed at 05:00:26.552622 after 1.04 seconds
+[0m05:00:26.553362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac7ffed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac874990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac874e50>]}
+[0m05:00:26.554019 [debug] [MainThread]: Flushing usage events
+[0m05:02:21.975969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7a57b0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ab92810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ab92b10>]}
+
+
+============================== 05:02:21.979623 | 104b9ec4-5258-4538-96a8-ae530379f6e1 ==============================
+[0m05:02:21.979623 [info ] [MainThread]: Running with dbt=1.7.9
+[0m05:02:21.980448 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'debug': 'False', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m05:02:21.981206 [info ] [MainThread]: dbt version: 1.7.9
+[0m05:02:21.981799 [info ] [MainThread]: python version: 3.11.8
+[0m05:02:21.982341 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m05:02:21.982858 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m05:02:22.775100 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m05:02:22.775921 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m05:02:22.776459 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m05:02:22.925805 [info ] [MainThread]: Configuration:
+[0m05:02:22.926549 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:02:22.927068 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:02:22.927570 [info ] [MainThread]: Required dependencies:
+[0m05:02:22.928123 [debug] [MainThread]: Executing "git --help"
+[0m05:02:22.930423 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:02:22.931052 [debug] [MainThread]: STDERR: "b''"
+[0m05:02:22.931580 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:02:22.932145 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:02:22.932660 [info ] [MainThread]: [31m1 check failed:[0m
+[0m05:02:22.933275 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "techhaus", target "dev" invalid: {'type': 'service_account', 'project_id': 'duckdbt-pipeline', 'private_key_id': '9a1e75d9a31873cdd9ed1c0147906fee9117d0c2', 'private_key': '-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCu80gBUhatLWfl 7zvVqWxByhr2Dwp+OiZvR4X3mJsWJxtDhNimpT5MN2UujBRSn/409N4VgCQcgukW 3GK9+nj1iKUlrqW/vuyVkiZecjpwRdT1eSp/EdyXlm2QlFjdn8fUi8p9hpD0CIKO xXlvGy1VAtw3/5pmGUhcINICg0jCbB65UXKxPmyLv1F6GstHBP4mBPZzP0SS8tcx PUf3lY4fTbK16UtS2YueCmdkhnYcnzk5+tW66ZQ1nHm5TX4KmOFvkuD6Rro3M0dA bYoW9C+jhbWyAaW582tTJoHeq5dW1mjAC+xg0/Spls5H9d0yj5vdDFOhjdpouHjn TRViMlLrAgMBAAECggEAFHQDuIfOIovlktelBqXVLrHVShatvYkd14ekmAg4JV8I DHI6WUKF+ydvcFbXGhEeCTc8GYZkHQ3e+Jm7qjCKC1E2LCbJYOvja9nCG5Y+J8Rk 5m02dH70QP1IrOJIVgypMjuaPjzzswalq3xXEJARp4J7Qsliqx9h5XIUK1AJkGpz B0bPP4uE74pk9JMgeosnTz6xsEt8sFF+MwL5uq4qzxc4IFlMstggnS5vXF2+6RbX flu/zyGIuwCtmk5am17G1y8hgYMHZqtpXPH3ObD50yPLrXlGoFKB5TOLG/YjN3hB jscgRlskFfsDpVLqIt+GJHWnE6V9wpshDMGfsMV4LQKBgQDULzXywd1YgNYE4uZO eD46E6OYdwAp5GfAY715JxxTbfGvfsbzh93MSDTsUe6vNo3Mvh43h83R1EcqTfLi c6KHv93kw8QIpYxWaz+ySO5Xl73CdKhOjnQIgleR194yzit2Nf4mQdu1u8M0GpNa RB8bwSuVYh/jHet0h7TwsDpKFQKBgQDTE7/gawvQ7o+gR01bDjduh0SP9DMK/Agb PxWWZHGVcX2hGQEVvMceZl2mxYHJtfqvEtVBjoTOjV5ETJO3zfUXH+mH7AcSHlXo ur0o3nua9AVVs9SvOwHy3blqTIltDlW5AfKsummVH5AnuRoohk3wvKpB6+bk34dQ TSDQFmJo/wKBgFMhG/W71khyUWcgrjJYEakXQKTfGoVPIwbRDM6GcCaPkHy9Ip0O weri7zkW8Hhc2zk30wbWgeCPVkJQv7PQsgCVPw39VLQ+h7jj09S5lgdjP8kLg1Uj onoi9sQA2uD0vTpW9PdwHfAZW+Tx9IEM51MsXzLreqq0cib5c/5ITM3xAoGAVj6p le7nQxVWxiycJOpoJ9dJYnBrMr/MKCXckji0WFWo+VwYH2OlEHzPI0dsQpkCtupB DKpJBYSp0cpgSSf0TuCRMSJ1uSd//rnedIaDhsrSKzRxYLABmdSS4CYpuM+0owVy vLTmUzI0Wqa9U3Wc/xJ3lrvm+fmDdoItOBkNWM0CgYEAhtBRx0PbqeHsG9y5uFMz V4wmmvscApjGs1eHzFXQFRt9dqCPzjc7va7K4yqI/sk1066j5/uwnWd1zqWLrISh bEm982lWTiEOpP7FQ7DZpEsmklLJhUYeZTVdHJAQoRP1gTz3XmkOqOkEDVfGrpMk xrgS9Q+uEUf1mPJDCcNbnRI= -----END PRIVATE KEY-----', 'client_email': 'duckdbt@duckdbt-pipeline.iam.gserviceaccount.com', 'client_id': 113072508983934244089, 'auth_uri': 'https://accounts.google.com/o/oauth2/auth', 'token_uri': 'https://oauth2.googleapis.com/token', 'auth_provider_x509_cert_url': 'https://www.googleapis.com/oauth2/v1/certs', 'client_x509_cert_url': 'https://www.googleapis.com/robot/v1/metadata/x509/duckdbt%40duckdbt-pipeline.iam.gserviceaccount.com', 'universe_domain': 'googleapis.com'} is not valid under any of the given schemas
+
+
+[0m05:02:22.934550 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.0327914, "process_user_time": 3.395312, "process_kernel_time": 0.207957, "process_mem_max_rss": "195356", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m05:02:22.935354 [debug] [MainThread]: Command `dbt debug` failed at 05:02:22.935125 after 1.03 seconds
+[0m05:02:22.935968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7a580090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ea16fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7c258a50>]}
+[0m05:02:22.936605 [debug] [MainThread]: Flushing usage events
+[0m05:03:22.902569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b7f3110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8cb4f210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b62be10>]}
+
+
+============================== 05:03:22.906357 | 2cc5cacf-4250-499b-b9b1-a03ce91c8a9d ==============================
+[0m05:03:22.906357 [info ] [MainThread]: Running with dbt=1.7.9
+[0m05:03:22.907187 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m05:03:22.907934 [info ] [MainThread]: dbt version: 1.7.9
+[0m05:03:22.908524 [info ] [MainThread]: python version: 3.11.8
+[0m05:03:22.909069 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m05:03:22.909586 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m05:03:23.712066 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m05:03:23.712804 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m05:03:23.713311 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m05:03:23.864153 [info ] [MainThread]: Configuration:
+[0m05:03:23.864890 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:03:23.865442 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:03:23.865984 [info ] [MainThread]: Required dependencies:
+[0m05:03:23.866537 [debug] [MainThread]: Executing "git --help"
+[0m05:03:23.868815 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:03:23.869463 [debug] [MainThread]: STDERR: "b''"
+[0m05:03:23.870014 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:03:23.870545 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:03:23.871053 [info ] [MainThread]: [31m1 check failed:[0m
+[0m05:03:23.871685 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "techhaus", target "dev" invalid: {'type': 'service_account', 'project_id': 'duckdbt-pipeline', 'private_key_id': '9a1e75d9a31873cdd9ed1c0147906fee9117d0c2', 'private_key': '-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCu80gBUhatLWfl\\n7zvVqWxByhr2Dwp+OiZvR4X3mJsWJxtDhNimpT5MN2UujBRSn/409N4VgCQcgukW\\n3GK9+nj1iKUlrqW/vuyVkiZecjpwRdT1eSp/EdyXlm2QlFjdn8fUi8p9hpD0CIKO\\nxXlvGy1VAtw3/5pmGUhcINICg0jCbB65UXKxPmyLv1F6GstHBP4mBPZzP0SS8tcx\\nPUf3lY4fTbK16UtS2YueCmdkhnYcnzk5+tW66ZQ1nHm5TX4KmOFvkuD6Rro3M0dA\\nbYoW9C+jhbWyAaW582tTJoHeq5dW1mjAC+xg0/Spls5H9d0yj5vdDFOhjdpouHjn\\nTRViMlLrAgMBAAECggEAFHQDuIfOIovlktelBqXVLrHVShatvYkd14ekmAg4JV8I\\nDHI6WUKF+ydvcFbXGhEeCTc8GYZkHQ3e+Jm7qjCKC1E2LCbJYOvja9nCG5Y+J8Rk\\n5m02dH70QP1IrOJIVgypMjuaPjzzswalq3xXEJARp4J7Qsliqx9h5XIUK1AJkGpz\\nB0bPP4uE74pk9JMgeosnTz6xsEt8sFF+MwL5uq4qzxc4IFlMstggnS5vXF2+6RbX\\nflu/zyGIuwCtmk5am17G1y8hgYMHZqtpXPH3ObD50yPLrXlGoFKB5TOLG/YjN3hB\\njscgRlskFfsDpVLqIt+GJHWnE6V9wpshDMGfsMV4LQKBgQDULzXywd1YgNYE4uZO\\neD46E6OYdwAp5GfAY715JxxTbfGvfsbzh93MSDTsUe6vNo3Mvh43h83R1EcqTfLi\\nc6KHv93kw8QIpYxWaz+ySO5Xl73CdKhOjnQIgleR194yzit2Nf4mQdu1u8M0GpNa\\nRB8bwSuVYh/jHet0h7TwsDpKFQKBgQDTE7/gawvQ7o+gR01bDjduh0SP9DMK/Agb\\nPxWWZHGVcX2hGQEVvMceZl2mxYHJtfqvEtVBjoTOjV5ETJO3zfUXH+mH7AcSHlXo\\nur0o3nua9AVVs9SvOwHy3blqTIltDlW5AfKsummVH5AnuRoohk3wvKpB6+bk34dQ\\nTSDQFmJo/wKBgFMhG/W71khyUWcgrjJYEakXQKTfGoVPIwbRDM6GcCaPkHy9Ip0O\\nweri7zkW8Hhc2zk30wbWgeCPVkJQv7PQsgCVPw39VLQ+h7jj09S5lgdjP8kLg1Uj\\nonoi9sQA2uD0vTpW9PdwHfAZW+Tx9IEM51MsXzLreqq0cib5c/5ITM3xAoGAVj6p\\nle7nQxVWxiycJOpoJ9dJYnBrMr/MKCXckji0WFWo+VwYH2OlEHzPI0dsQpkCtupB\\nDKpJBYSp0cpgSSf0TuCRMSJ1uSd//rnedIaDhsrSKzRxYLABmdSS4CYpuM+0owVy\\nvLTmUzI0Wqa9U3Wc/xJ3lrvm+fmDdoItOBkNWM0CgYEAhtBRx0PbqeHsG9y5uFMz\\nV4wmmvscApjGs1eHzFXQFRt9dqCPzjc7va7K4yqI/sk1066j5/uwnWd1zqWLrISh\\nbEm982lWTiEOpP7FQ7DZpEsmklLJhUYeZTVdHJAQoRP1gTz3XmkOqOkEDVfGrpMk\\nxrgS9Q+uEUf1mPJDCcNbnRI=\\n-----END PRIVATE KEY-----\\n', 'client_email': 'duckdbt@duckdbt-pipeline.iam.gserviceaccount.com', 'client_id': 113072508983934244089, 'auth_uri': 'https://accounts.google.com/o/oauth2/auth', 'token_uri': 'https://oauth2.googleapis.com/token', 'auth_provider_x509_cert_url': 'https://www.googleapis.com/oauth2/v1/certs', 'client_x509_cert_url': 'https://www.googleapis.com/robot/v1/metadata/x509/duckdbt%40duckdbt-pipeline.iam.gserviceaccount.com', 'universe_domain': 'googleapis.com'} is not valid under any of the given schemas
+
+
+[0m05:03:23.872924 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.0460247, "process_user_time": 3.473308, "process_kernel_time": 0.176066, "process_mem_max_rss": "195368", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m05:03:23.873730 [debug] [MainThread]: Command `dbt debug` failed at 05:03:23.873500 after 1.05 seconds
+[0m05:03:23.874341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b677390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8fc55b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b7f8dd0>]}
+[0m05:03:23.874969 [debug] [MainThread]: Flushing usage events
+[0m05:04:53.751365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff87162c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff87340d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff87340d90>]}
+
+
+============================== 05:04:53.755015 | bb010b1b-4359-4be4-982a-7e5e01c58c02 ==============================
+[0m05:04:53.755015 [info ] [MainThread]: Running with dbt=1.7.9
+[0m05:04:53.755857 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'version_check': 'True', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m05:04:53.756565 [info ] [MainThread]: dbt version: 1.7.9
+[0m05:04:53.757152 [info ] [MainThread]: python version: 3.11.8
+[0m05:04:53.757733 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m05:04:53.758263 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m05:04:54.597790 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m05:04:54.598570 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m05:04:54.599107 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m05:04:54.751697 [info ] [MainThread]: Configuration:
+[0m05:04:54.752407 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:04:54.752913 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:04:54.753401 [info ] [MainThread]: Required dependencies:
+[0m05:04:54.753952 [debug] [MainThread]: Executing "git --help"
+[0m05:04:54.756122 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:04:54.756768 [debug] [MainThread]: STDERR: "b''"
+[0m05:04:54.757245 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:04:54.757758 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:04:54.758267 [info ] [MainThread]: [31m1 check failed:[0m
+[0m05:04:54.758869 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "techhaus", target "dev" invalid: {'env': 'GOOGLE_APPLICATION_CREDENTIALS'} is not valid under any of the given schemas
+
+
+[0m05:04:54.760050 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.0852424, "process_user_time": 3.566169, "process_kernel_time": 0.172104, "process_mem_max_rss": "195128", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m05:04:54.760824 [debug] [MainThread]: Command `dbt debug` failed at 05:04:54.760619 after 1.09 seconds
+[0m05:04:54.761405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff871efc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff871ef550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8b6330d0>]}
+[0m05:04:54.762076 [debug] [MainThread]: Flushing usage events
+[0m05:05:38.609050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7ca2e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7b1fe90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7ca1250>]}
+
+
+============================== 05:05:38.612754 | d503d541-51f5-428a-89db-095a99950ad3 ==============================
+[0m05:05:38.612754 [info ] [MainThread]: Running with dbt=1.7.9
+[0m05:05:38.613562 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'version_check': 'True', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m05:05:38.614304 [info ] [MainThread]: dbt version: 1.7.9
+[0m05:05:38.614891 [info ] [MainThread]: python version: 3.11.8
+[0m05:05:38.615457 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m05:05:38.615977 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m05:05:39.402055 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m05:05:39.402783 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m05:05:39.403345 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m05:05:39.551963 [info ] [MainThread]: Configuration:
+[0m05:05:39.552630 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m05:05:39.553150 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:05:39.553623 [info ] [MainThread]: Required dependencies:
+[0m05:05:39.554152 [debug] [MainThread]: Executing "git --help"
+[0m05:05:39.559253 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:05:39.560396 [debug] [MainThread]: STDERR: "b''"
+[0m05:05:39.560882 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:05:39.561356 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m05:05:39.561872 [info ] [MainThread]: [31m1 check failed:[0m
+[0m05:05:39.562391 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "techhaus", target "dev" invalid: {'env': '/home/ubuntu/workspaces/techhaus/credentials.json'} is not valid under any of the given schemas
+
+
+[0m05:05:39.563540 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.0281761, "process_user_time": 3.379158, "process_kernel_time": 0.216458, "process_mem_max_rss": "195152", "process_out_blocks": "16", "command_success": false, "process_in_blocks": "0"}
+[0m05:05:39.564318 [debug] [MainThread]: Command `dbt debug` failed at 05:05:39.564104 after 1.03 seconds
+[0m05:05:39.564895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7caab90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7ca8050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1685e50>]}
+[0m05:05:39.565510 [debug] [MainThread]: Flushing usage events
+[0m05:05:55.246054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff976e0610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff976c4250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff976c6a90>]}
+
+
+============================== 05:05:55.249610 | db158223-0f77-4d29-bca9-fcf757dc4184 ==============================
+[0m05:05:55.249610 [info ] [MainThread]: Running with dbt=1.7.9
+[0m05:05:55.250458 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m05:05:55.251156 [info ] [MainThread]: dbt version: 1.7.9
+[0m05:05:55.251749 [info ] [MainThread]: python version: 3.11.8
+[0m05:05:55.252287 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m05:05:55.252807 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m05:05:56.121358 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m05:05:56.122163 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m05:05:56.122699 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m05:05:56.123508 [info ] [MainThread]: adapter type: bigquery
+[0m05:05:56.124078 [info ] [MainThread]: adapter version: 1.7.6
+[0m05:05:56.277117 [info ] [MainThread]: Configuration:
+[0m05:05:56.277872 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m05:05:56.278437 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m05:05:56.278936 [info ] [MainThread]: Required dependencies:
+[0m05:05:56.279509 [debug] [MainThread]: Executing "git --help"
+[0m05:05:56.281766 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m05:05:56.282433 [debug] [MainThread]: STDERR: "b''"
+[0m05:05:56.282952 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m05:05:56.283517 [info ] [MainThread]: Connection:
+[0m05:05:56.284063 [info ] [MainThread]:   method: service-account
+[0m05:05:56.284583 [info ] [MainThread]:   database: duckdbt-pipeline
+[0m05:05:56.285091 [info ] [MainThread]:   execution_project: duckdbt-pipeline
+[0m05:05:56.285599 [info ] [MainThread]:   schema: techhaus
+[0m05:05:56.286104 [info ] [MainThread]:   location: US
+[0m05:05:56.286586 [info ] [MainThread]:   priority: None
+[0m05:05:56.287067 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m05:05:56.287560 [info ] [MainThread]:   impersonate_service_account: None
+[0m05:05:56.288046 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m05:05:56.288515 [info ] [MainThread]:   job_retries: 1
+[0m05:05:56.288980 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m05:05:56.289460 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m05:05:56.289961 [info ] [MainThread]:   keyfile: /home/ubuntu/workspaces/techhaus/credentials.json
+[0m05:05:56.290421 [info ] [MainThread]:   timeout_seconds: None
+[0m05:05:56.290878 [info ] [MainThread]:   client_id: None
+[0m05:05:56.291333 [info ] [MainThread]:   token_uri: None
+[0m05:05:56.291842 [info ] [MainThread]:   dataproc_region: None
+[0m05:05:56.292312 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m05:05:56.292763 [info ] [MainThread]:   gcs_bucket: None
+[0m05:05:56.293223 [info ] [MainThread]:   dataproc_batch: None
+[0m05:05:56.293781 [info ] [MainThread]: Registered adapter: bigquery=1.7.6
+[0m05:05:56.294572 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m05:05:56.295090 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:05:56.483956 [debug] [MainThread]: On debug: select 1 as id
+[0m05:05:57.097209 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=duckdbt-pipeline&j=bq:US:6863c1c0-a35e-4e63-a2bc-92d57fd36113&page=queryresults
+[0m05:05:57.823204 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m05:05:57.823955 [info ] [MainThread]: [32mAll checks passed![0m
+[0m05:05:57.825131 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 2.6554163, "process_user_time": 3.780327, "process_kernel_time": 0.18371, "process_mem_max_rss": "199500", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m05:05:57.825966 [debug] [MainThread]: Command `dbt debug` succeeded at 05:05:57.825744 after 2.66 seconds
+[0m05:05:57.826498 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m05:05:57.827052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff976a3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9768c110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8524bad0>]}
+[0m05:05:57.827696 [debug] [MainThread]: Flushing usage events
+[0m04:41:26.613012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa757e790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa757e610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa757e750>]}
+
+
+============================== 04:41:26.616980 | 2bcc2be9-42d2-494f-80e0-68ea4865bbcf ==============================
+[0m04:41:26.616980 [info ] [MainThread]: Running with dbt=1.7.9
+[0m04:41:26.617795 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/ubuntu/workspaces/techhaus/dbt', 'log_path': '/home/ubuntu/workspaces/techhaus/dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m04:41:26.618532 [info ] [MainThread]: dbt version: 1.7.9
+[0m04:41:26.619104 [info ] [MainThread]: python version: 3.11.8
+[0m04:41:26.619660 [info ] [MainThread]: python path: /home/ubuntu/.pyenv/versions/3.11.8/envs/3dapp/bin/python
+[0m04:41:26.620153 [info ] [MainThread]: os info: Linux-5.15.0-1052-oracle-aarch64-with-glibc2.31
+[0m04:41:27.929507 [info ] [MainThread]: Using profiles dir at /home/ubuntu/workspaces/techhaus/dbt
+[0m04:41:27.930302 [info ] [MainThread]: Using profiles.yml file at /home/ubuntu/workspaces/techhaus/dbt/profiles.yml
+[0m04:41:27.930827 [info ] [MainThread]: Using dbt_project.yml file at /home/ubuntu/workspaces/techhaus/dbt/dbt_project.yml
+[0m04:41:27.931578 [info ] [MainThread]: adapter type: bigquery
+[0m04:41:27.932098 [info ] [MainThread]: adapter version: 1.7.6
+[0m04:41:28.077517 [info ] [MainThread]: Configuration:
+[0m04:41:28.078244 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m04:41:28.078768 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m04:41:28.079282 [info ] [MainThread]: Required dependencies:
+[0m04:41:28.080085 [debug] [MainThread]: Executing "git --help"
+[0m04:41:28.084068 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m04:41:28.084724 [debug] [MainThread]: STDERR: "b''"
+[0m04:41:28.085218 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m04:41:28.085763 [info ] [MainThread]: Connection:
+[0m04:41:28.086329 [info ] [MainThread]:   method: service-account
+[0m04:41:28.086830 [info ] [MainThread]:   database: duckdbt-pipeline
+[0m04:41:28.087294 [info ] [MainThread]:   execution_project: duckdbt-pipeline
+[0m04:41:28.087786 [info ] [MainThread]:   schema: techhaus
+[0m04:41:28.088255 [info ] [MainThread]:   location: US
+[0m04:41:28.088720 [info ] [MainThread]:   priority: None
+[0m04:41:28.089194 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m04:41:28.089658 [info ] [MainThread]:   impersonate_service_account: None
+[0m04:41:28.090123 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m04:41:28.090626 [info ] [MainThread]:   job_retries: 1
+[0m04:41:28.091092 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m04:41:28.091578 [info ] [MainThread]:   job_execution_timeout_seconds: None
+[0m04:41:28.092050 [info ] [MainThread]:   keyfile: /opt/dagster/app/credentials.json
+[0m04:41:28.092511 [info ] [MainThread]:   timeout_seconds: None
+[0m04:41:28.093018 [info ] [MainThread]:   client_id: None
+[0m04:41:28.093472 [info ] [MainThread]:   token_uri: None
+[0m04:41:28.093924 [info ] [MainThread]:   dataproc_region: None
+[0m04:41:28.094424 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m04:41:28.094890 [info ] [MainThread]:   gcs_bucket: None
+[0m04:41:28.095350 [info ] [MainThread]:   dataproc_batch: None
+[0m04:41:28.095989 [info ] [MainThread]: Registered adapter: bigquery=1.7.6
+[0m04:41:28.096811 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m04:41:28.097325 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:41:28.097946 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: '/opt/dagster/app/credentials.json''
+[0m04:41:28.098587 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m04:41:28.099092 [info ] [MainThread]: [31m1 check failed:[0m
+[0m04:41:28.099587 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: '/opt/dagster/app/credentials.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m04:41:28.100288 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.5612956, "process_user_time": 3.949309, "process_kernel_time": 0.216071, "process_mem_max_rss": "214232", "process_out_blocks": "24", "command_success": false, "process_in_blocks": "0"}
+[0m04:41:28.101030 [debug] [MainThread]: Command `dbt debug` failed at 04:41:28.100832 after 1.56 seconds
+[0m04:41:28.101545 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m04:41:28.102062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7593290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9453cd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7585910>]}
+[0m04:41:28.102698 [debug] [MainThread]: Flushing usage events

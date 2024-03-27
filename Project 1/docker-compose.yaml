@@ -1,0 +1,75 @@
+version: '3'
+
+services:
+  dagster_storage_db:
+    image: postgres:16
+    container_name: "dagster_storage_db"
+    environment:
+      POSTGRES_USER: ${DAGSTER_PG_USERNAME}
+      POSTGRES_PASSWORD: ${DAGSTER_PG_PASSWORD}
+      POSTGRES_DB: ${DAGSTER_PG_DB}
+    networks:
+      - dagster_network
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "airflow" ]
+      interval: 10s
+      retries: 5
+    restart: always
+
+  dagster-webserver:
+    image: dagster:3.11
+    entrypoint:
+      - dagster-webserver
+      - -h
+      - "0.0.0.0"
+      - -p
+      - "3000"
+      - -w
+      - workspace.yaml
+    container_name: webserver
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    environment:
+      DAGSTER_POSTGRES_USER: ${DAGSTER_PG_USERNAME}
+      DAGSTER_POSTGRES_PASSWORD: ${DAGSTER_PG_PASSWORD}
+      DAGSTER_POSTGRES_DB: ${DAGSTER_PG_DB}
+    volumes:
+      # Make docker client accessible so we can terminate containers from the webserver
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/io_manager_storage:/tmp/io_manager_storage
+    networks:
+      - dagster_network
+    depends_on:
+      - dagster_storage_db
+
+  dagster-daemon:
+    image: dagster:3.11
+    entrypoint:
+      - dagster-daemon
+      - run
+    container_name: dagster_daemon
+    restart: on-failure
+    environment:
+      DAGSTER_POSTGRES_USER: ${DAGSTER_PG_USERNAME}
+      DAGSTER_POSTGRES_PASSWORD: ${DAGSTER_PG_PASSWORD}
+      DAGSTER_POSTGRES_DB: ${DAGSTER_PG_DB}
+    volumes:
+      # Make docker client accessible so we can launch containers using host docker
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/io_manager_storage:/tmp/io_manager_storage
+    networks:
+      - dagster_network
+    depends_on:
+      - dagster_storage_db
+
+networks:
+  dagster_network:
+    driver: bridge
+    name: dagster_network
+
+volumes:
+  postgres-db-volume:

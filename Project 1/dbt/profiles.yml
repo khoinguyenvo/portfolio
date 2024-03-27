@@ -1,0 +1,12 @@
+activeTix:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      project: activetix
+      dataset: raw
+      location: US
+      threads: 4
+      OPTIONAL_CONFIG: VALUE
+      method: service-account
+      keyfile: /opt/dagster/app/credentials.json

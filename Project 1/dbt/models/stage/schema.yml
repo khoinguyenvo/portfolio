@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_orders
+    schema: staging
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+    meta:
+      dagster:
+        asset_key: ["stg_orders"]
+        group: stage
+
+  - name: stg_events
+    schema: staging
+    columns:
+      - name: id
+        tests:
+          - not_null
+    meta:
+      dagster:
+        asset_key: ["stg_events"]
+        group: stage
+
+  - name: stg_organizers
+    schema: staging
+    columns:
+      - name: id
+        tests:
+          - unique
+    meta:
+      dagster:
+        asset_key: ["stg_organizers"]
+        group: stage
+
+  - name: stg_product
+    schema: staging
+    meta:
+      dagster:
+        asset_key: ["stg_product"]
+        group: stage
+
+  - name: stg_customers
+    schema: staging
+    columns:
+      - name: id
+        tests:
+          - unique
+    meta:
+      dagster:
+        group: stage

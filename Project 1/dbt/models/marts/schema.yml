@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: bi_customers
+    schema: marts
+    meta:
+      dagster:
+        asset_key: ["bi_customers"]
+        group: marts
+
+  - name: bi_orders
+    schema: marts
+    meta:
+      dagster:
+        asset_key: ["bi_orders"]
+        group: marts

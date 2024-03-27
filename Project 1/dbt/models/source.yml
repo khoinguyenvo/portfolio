@@ -1,0 +1,54 @@
+verions: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw_sale_orders
+        meta:
+          dagster:
+            asset_key: ["raw_sale_orders"]
+            group: raw
+      - name: raw_order_items
+        meta:
+          dagster:
+            asset_key: ["raw_order_items"]
+            group: raw
+      - name: raw_order_attendant
+        meta:
+          dagster:
+            asset_key: ["raw_order_attendant"]
+            group: raw
+      - name: raw_order_events
+        meta:
+          dagster:
+            asset_key: ["raw_order_events"]
+            group: raw
+      - name: raw_customers
+        meta:
+          dagster:
+            asset_key: ["raw_customers"]
+            group: raw
+      - name: raw_events
+        meta:
+          dagster:
+            asset_key: ["raw_events"]
+            group: raw
+      - name: raw_organizers
+        meta:
+          dagster:
+            asset_key: ["raw_organizers"]
+            group: raw
+      - name: raw_login
+        meta:
+          dagster:
+            asset_key: ["raw_login"]
+            group: raw
+      - name: stg_countries
+        meta:
+          dagster:
+            group: stage
+      - name: calendar
+        meta:
+          dagster:
+            group: stage
