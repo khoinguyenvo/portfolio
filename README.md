@@ -20,7 +20,7 @@ This is a project I did for a company specializing in online ticket sales, cater
 ### 3. Constrains & Challenges:
 It's worth metioning the constraints and challenges I encountered before and during the project because they are the decisive factors of the approach I adopted.
 
-First among them was the dependency on the head DevOps of the company for the access to the raw data. In particular, I was restricted from directly acessing the company's transactional database stored in MySQL. Instead, the head DevOps would dump each entire table from the database into Json files, before uploading them to an AWS S3 bucket and overwriting the existing files. This constrain made micro-batch processing and incremental loading almost impossible. I needed to come up with a workaround that had to be memory-efficient and scalable when the size of those Json files grew.
+First among them was the dependency on the head DevOps of the company for the access to the raw data. In particular, I was restricted from directly acessing the company's transactional database stored in MySQL. Instead, the head DevOps would dump each entire table from the database into JSON files, before uploading them to an AWS S3 bucket and overwriting the existing files. This constrain made micro-batch processing and incremental loading almost impossible. I needed to come up with a workaround that had to be memory-efficient and scalable when the size of those JSON files grew.
 
 The second most significant constrain I encountered was that the new data would only arrive in the S3 bucket once a day at midnight, so theoretically the data I would receive was only up to 23:59:59 the day before. This was definitely something I had to work with the stakeholders to manage their expectations.
 
@@ -28,7 +28,11 @@ Last on the list is the communication with the stakeholders, which is a common c
 
 ### 4. Approach:
 #### EXTRACT:
-
+##### As mentioned above, the data source I was working with is a collection of JSON files in an AWS S3 bucket, some of them were heavily nested. I had two options:
+- Build a fully managed pipeline with AWS Glue and AWS Crawler, then create a databse using AWS Athena. Or if I had wanted to have more flexibility, I could have built used AWS Lambda function.
+- Code a pipeline with Python and open-source tools.
+##### I did try both of them, and finally decided to go the second option because:
+- I was going to use Power BI to build a business dashboard from the cleaned data, and set up a daily schedule refresh to automatically refresh the dashboard underlying dataset. To achieve this, I needed to either install the Power BI gateway on the host operating system (OS) to which I would later deploy my pipeline or utilize a cloud-based data source such as Google BigQuery or Snowflake. Unfortunately, the Power BI gateway is only compatible with Windows OS, whereas my pipeline would be containerized within a Docker container running on Linux. Consequently, I had to opt for a serverless data warehouse as the target database for this project. While I favor Athena for its robust distributed Presto SQL engine, I had to exclude it from consideration in this case. This decision was due to Power BI's limitation of connecting to Athena solely via an ODBC driver installed locally, necessitating the installation of a Power BI gateway for scheduling daily refreshes.
 #### LOAD:
 #### TRANSFORM:
 ### 5. Technologies, Tools, and Frameworkes:
