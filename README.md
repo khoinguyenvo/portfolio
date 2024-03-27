@@ -19,4 +19,4 @@ This project leverages a variety of open-source technologies (Dagster and dbt) a
 ![activeTix](https://github.com/khoinguyenvo/Porfolio/assets/133230440/c5faa94d-b56d-4d25-a8dc-d874f25af15c)
 
 #### 5. Github repository:
-https://github.com/khoinguyenvo/Ticketing-Platform-Data-Solution
+https://github.com/khoinguyenvo/Porfolio/tree/43fd579549de6aa6ee7cce5cc29fddbea419636d/Project%201
