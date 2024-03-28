@@ -123,7 +123,11 @@ def raw_sale_orders(context: AssetExecutionContext) -> MaterializeResult:
     return MaterializeResult(metadata={"number_of_rows": data.shape[0]})
 ```
 #### 4.4. Transform:
-
+In this project I chose Data Build Tool (dbt) for the transformation part for a number of reasons:
+- SQL!
+- dbt makes it extremely easy to document my models, including the source and target schema, the data integrity checks, and the compiled query behind it.
+- Built-in data quality check.
+- Reuseable macros.
 
 ### 5. Technologies, Tools, and Frameworkes:
 This project leverages a variety of open-source technologies (Dagster and dbt) and cloud services (GCP, AWS and Azure), with Python and SQL being the major programming languages. The final application is running on Docker to ensure scalability.
