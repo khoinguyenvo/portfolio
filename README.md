@@ -1,5 +1,5 @@
 # Porfolio
-Greetings! My name is Neil, a data enthusiast. Welcome to my Github repository showcasing a compilation of projects reflecting my journey and expertise in the realm of business intelligence and data engineering. Within this repositoy, you will find a diversity of projects I have put together throughout my data professional career, from building robust data pipelines, designing databased to crafting insightful business dashboards. Wether you're a fellow data enthusiast, a potential employer, or simply curios about the possibilities of data, please feel free to explore and reach out with any questions or opportunities for collaboration. 🙂
+Greetings! My name is Neil, a data enthusiast. Welcome to my Github repository showcasing a compilation of major projects reflecting my journey and expertise in the realm of business intelligence and data engineering. Within this repositoy, you will find a diversity of projects I have put together throughout my data professional career, from building robust data pipelines, designing databased to crafting insightful business dashboards. Wether you're a fellow data enthusiast, a potential employer, or simply curios about the possibilities of data, please feel free to explore and reach out with any questions or opportunities for collaboration. 🙂
 
 ## I. TICKETING PLATFORM DATA PIPELINES
 ### 1. Background:
@@ -27,14 +27,22 @@ The second most significant constrain I encountered was that the new data would 
 Last on the list is the communication with the stakeholders, which is a common challenge faced by many other data engineers.  
 
 ### 4. Approach:
-#### EXTRACT:
+#### 4.1. Planning:
+
+#### 4.2. Extract:
 ##### As mentioned above, the data source I was working with is a collection of JSON files in an AWS S3 bucket, some of them were heavily nested. I had two options:
 - Build a fully managed pipeline with AWS Glue and AWS Crawler, then create a databse using AWS Athena. Or if I had wanted to have more flexibility, I could have built used AWS Lambda function.
 - Code a pipeline with Python and open-source tools.
 ##### I did try both of them, and finally decided to go the second option because:
 - I was going to use Power BI to build a business dashboard from the cleaned data, and set up a daily schedule refresh to automatically refresh the dashboard underlying dataset. To achieve this, I needed to either install the Power BI gateway on the host operating system (OS) to which I would later deploy my pipeline or utilize a cloud-based data source such as Google BigQuery or Snowflake. Unfortunately, the Power BI gateway is only compatible with Windows OS, whereas my pipeline would be containerized within a Docker container running on Linux. Consequently, I had to opt for a serverless data warehouse as the target database for this project. While I favor Athena for its robust distributed Presto SQL engine, I had to exclude it from consideration in this case. This decision was due to Power BI's limitation of connecting to Athena solely via an ODBC driver installed locally, necessitating the installation of a Power BI gateway for scheduling daily refreshes.
-#### LOAD:
-#### TRANSFORM:
+- I planned to integrate Data Build Tool (dbt) to manage the transformation of raw data in the later stages of the pipeline, with Dagster orchestrating the entire process.
+
+#### 4.3. Load:
+The raw data extracted from the previous step were loaded into the target tables in BigQuery utilizing the Google Cloud BigQuery Python API. While existing tables would be overwritten with the new data, a schema validation process was always conducted prior to data ingestion. This process ensured that both column headers and data types between the source data and the target tables matched. An error would be raised at this stage if there were any mismatches in the schema.
+
+#### 4.4. Transform:
+
+
 ### 5. Technologies, Tools, and Frameworkes:
 This project leverages a variety of open-source technologies (Dagster and dbt) and cloud services (GCP, AWS and Azure), with Python and SQL being the major programming languages. The final application is running on Docker to ensure scalability.
 
