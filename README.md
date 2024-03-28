@@ -1,7 +1,10 @@
 # Porfolio
 Greetings! My name is Neil, a data enthusiast. Welcome to my Github repository showcasing a compilation of major projects reflecting my journey and expertise in the realm of business intelligence and data engineering. Within this repositoy, you will find a diversity of projects I have put together throughout my data professional career, from building robust data pipelines, designing databased to crafting insightful business dashboards. Wether you're a fellow data enthusiast, a potential employer, or simply curios about the possibilities of data, please feel free to explore and reach out with any questions or opportunities for collaboration. 🙂
 
-## I. TICKETING PLATFORM DATA PIPELINES
+<details>
+
+<summary>TICKETING PLATFORM DATA PIPELINES</summary>
+
 ### 1. Background:
 This is a project I did for a company specializing in online ticket sales, catering to sports and recreational events. While the initial database architecture effectively supported the platform's backend operations, this setup wasn't designed with analytical purposes in mind. Not only did data were stored scatteringly, but also the naming convention was a disaster. This lack of a standard data model hindered the company's ability to analyze the data and derive meaningful insights from it. 
 
@@ -33,13 +36,62 @@ Last on the list is the communication with the stakeholders, which is a common c
 ##### As mentioned above, the data source I was working with is a collection of JSON files in an AWS S3 bucket, some of them were heavily nested. I had two options:
 - Build a fully managed pipeline with AWS Glue and AWS Crawler, then create a databse using AWS Athena. Or if I had wanted to have more flexibility, I could have built used AWS Lambda function.
 - Code a pipeline with Python and open-source tools.
+  
 ##### I did try both of them, and finally decided to go the second option because:
 - I was going to use Power BI to build a business dashboard from the cleaned data, and set up a daily schedule refresh to automatically refresh the dashboard underlying dataset. To achieve this, I needed to either install the Power BI gateway on the host operating system (OS) to which I would later deploy my pipeline or utilize a cloud-based data source such as Google BigQuery or Snowflake. Unfortunately, the Power BI gateway is only compatible with Windows OS, whereas my pipeline would be containerized within a Docker container running on Linux. Consequently, I had to opt for a serverless data warehouse as the target database for this project. While I favor Athena for its robust distributed Presto SQL engine, I had to exclude it from consideration in this case. This decision was due to Power BI's limitation of connecting to Athena solely via an ODBC driver installed locally, necessitating the installation of a Power BI gateway for scheduling daily refreshes.
 - I planned to integrate Data Build Tool (dbt) to manage the transformation of raw data in the later stages of the pipeline, with Dagster orchestrating the entire process.
+  
+##### The steps I took:
+- **Step 1**: I took the initiative to create empty tables in BigQuery for the raw data. This preemptive step allowed me to declare the expected schema of the incoming data beforehand. By leveraging the BigQuery APIs in Python, I established a schema validation protocol ensuring that only columns declared in the target tables in BigQuery would be extracted from the source JSON files. While I usually utilize SQLALchemy ORM for schema validation, I opted for Google APIs due to their comprehensive built-in methods, simplifying the process effectively.
+- **Step 2:** The JSON file from the AWS S3 bucket was read into a streaming body before being read into a Pandas DataFrame. This approach not only eliminated the need for local disk space, but also enabled me to employ other resource optimization methods, such as reading data in chunks. Additionally, loading the file into a streaming body was significantly faster than downloading it locally, taking only 5-8 seconds compared to 30-50 seconds. This allowed multiple downloads to happen simultanously, without using too much resource.
+```Python
+class BigQueryOps:
+      """ 
+      This class consists of methods working with tables in Google Cloud BigQuery 
+      """
+    def __init__(self, table: str) -> None:
+        """ Instanciate a BigQuery instance with the declared table """
+        self.client = bigquery.Client()
+        try:
+            self.table = self.client.get_table(table)
+        except Exception as e:
+            raise ValueError(f"Error fetching table: {e}")
+
+    def get_columns(self) -> list:
+        """ 
+        Retrive a list columns of the table 
+        """
+        if self.table:
+            self.columns = [field.name for field in self.table.schema]
+            return self.columns
+        else:
+            raise ValueError("Error fetching columns!")
+
+...
+
+```
 
 #### 4.3. Load:
-The raw data extracted from the previous step were loaded into the target tables in BigQuery utilizing the Google Cloud BigQuery Python API. While existing tables would be overwritten with the new data, a schema validation process was always conducted prior to data ingestion. This process ensured that both column headers and data types between the source data and the target tables matched. An error would be raised at this stage if there were any mismatches in the schema.
+Once the DataFrame was created, basic transformations such as data type conversion, duplicate and null value removal were executed. Subsequently, the transformed DataFrame was loaded into the target table in BigQuery utilizing a method from the Google APIs. It's worth mentioning that I used Dagster MaterializeResult class to generate a graph illustrating the total rows loaded during each run. This enabled me to track day-over-day changes effectively.
 
+```Python
+@asset(compute_kind="Python", group_name="extract")
+def raw_sale_orders(context: AssetExecutionContext) -> MaterializeResult:
+    gc = BigQueryOps(table="activeTix.raw.raw_sale_orders") # Connect to the target table
+    s3 = S3Ops(
+        bucket="activetix",
+        key="datalakehouse/saleorder/saleorder.json",
+        columns=gc.get_columns(),                           # Only read columns that are in the target table
+    )
+    data = s3.get_data()
+    try:
+        gc.load_table(dataframe=data)
+    except Exception as e:
+        raise f"Failed to load table: {e}"
+    finally:
+        context.log.info(f"Total rows {data.shape[0]}")
+    return MaterializeResult(metadata={"number_of_rows": data.shape[0]})
+```
 #### 4.4. Transform:
 
 
@@ -50,3 +102,5 @@ This project leverages a variety of open-source technologies (Dagster and dbt) a
 
 ### 6. Github repository:
 [Project 1 - Online Ticketing Platform - Data Pipeline](https://github.com/khoinguyenvo/Porfolio/tree/43fd579549de6aa6ee7cce5cc29fddbea419636d/Project%201)
+<details>
+
