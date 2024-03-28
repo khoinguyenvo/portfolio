@@ -1,5 +1,5 @@
 WITH source AS
-(SELECT CAST(FORMAT_DATE('%Y%m%d', purchased_at) AS int64)                             AS date_id,
+(SELECT CAST(FORMAT_DATE('%Y%m%d', purchased_at) AS int64)                            AS date_id,
        oa.order_code                                                                  AS order_id,
        event_id,
        merchant_id                                                                    AS organizer_id,
