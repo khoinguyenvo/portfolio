@@ -43,12 +43,11 @@ Last on the list is the communication with the stakeholders, which is a common c
   
 ##### The steps I took:
 - **Step 1**: I took the initiative to create empty tables in BigQuery for the raw data. This preemptive step allowed me to declare the expected schema of the incoming data beforehand. By leveraging the BigQuery APIs in Python, I established a schema validation protocol ensuring that only columns declared in the target tables in BigQuery would be extracted from the source JSON files. While I usually utilize SQLALchemy ORM for schema validation, I opted for Google APIs due to their comprehensive built-in methods, simplifying the process effectively.
-- **Step 2:** The JSON file from the AWS S3 bucket was read into a streaming body before being read into a Pandas DataFrame. This approach not only eliminated the need for local disk space, but also enabled me to employ other resource optimization methods, such as reading data in chunks. Additionally, loading the file into a streaming body was significantly faster than downloading it locally, taking only 5-8 seconds compared to 30-50 seconds. This allowed multiple downloads to happen simultanously, without using too much resource.
 ```Python
 class BigQueryOps:
-      """ 
-      This class consists of methods working with tables in Google Cloud BigQuery 
-      """
+    """ 
+    This class consists of methods working with tables in Google Cloud BigQuery 
+    """
     def __init__(self, table: str) -> None:
         """ Instanciate a BigQuery instance with the declared table """
         self.client = bigquery.Client()
@@ -69,6 +68,37 @@ class BigQueryOps:
 
 ...
 
+```
+- **Step 2:** The JSON file from the AWS S3 bucket was read into a streaming body before being read into a Pandas DataFrame. This approach not only eliminated the need for local disk space, but also enabled me to employ other resource optimization methods, such as reading data in chunks. Additionally, loading the file into a streaming body was significantly faster than downloading it locally, taking only 5-8 seconds compared to 30-50 seconds. This allowed multiple downloads to happen simultanously, without using too much resource.
+```Python
+class S3Ops:
+  """ 
+  This class consists of methods working with files in AWS S3 
+  """
+    def __init__(self, bucket: str, key: str, columns: str = None) -> None:
+        """ 
+        Instanciate an s3 session and a resource instance with default configs 
+        """
+        self.bucket = bucket
+        self.key = key
+        self.columns = columns
+        self.s3_config = Config(s3={"use_accelerate_endpoint": True})
+        self.session = boto3.Session()
+        self.s3 = self.session.resource("s3", config=self.s3_config)
+
+    def get_data(self) -> pd.DataFrame:
+        """ Download json file as streaming object before reading into a Pandas DataFrame """
+        obj = self.s3.Object(self.bucket, self.key)
+        json_data = json.loads(obj.get()["Body"].read().decode())
+        if self.columns is None:
+            data_dict = json.dumps(json_data)
+            df = pd.DataFrame(json_data)
+        else:
+            data_dict = json.dumps(
+                [{col: entry[col] for col in self.columns} for entry in json_data]
+            )
+            df = pd.read_json(data_dict)
+        return df
 ```
 
 #### 4.3. Load:
