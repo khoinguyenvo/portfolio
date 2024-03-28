@@ -1,9 +1,7 @@
 # Porfolio
 Greetings! My name is Neil, a data enthusiast. Welcome to my Github repository showcasing a compilation of major projects reflecting my journey and expertise in the realm of business intelligence and data engineering. Within this repositoy, you will find a diversity of projects I have put together throughout my data professional career, from building robust data pipelines, designing databased to crafting insightful business dashboards. Wether you're a fellow data enthusiast, a potential employer, or simply curios about the possibilities of data, please feel free to explore and reach out with any questions or opportunities for collaboration. 🙂
 
-<details>
-
-<summary>TICKETING PLATFORM DATA PIPELINES</summary>
+## PROJECT 1: TICKETING PLATFORM DATA PIPELINES
 
 ### 1. Background:
 This is a project I did for a company specializing in online ticket sales, catering to sports and recreational events. While the initial database architecture effectively supported the platform's backend operations, this setup wasn't designed with analytical purposes in mind. Not only did data were stored scatteringly, but also the naming convention was a disaster. This lack of a standard data model hindered the company's ability to analyze the data and derive meaningful insights from it. 
@@ -29,10 +27,15 @@ The second most significant constrain I encountered was that the new data would 
 
 Last on the list is the communication with the stakeholders, which is a common challenge faced by many other data engineers.  
 
-### 4. Approach:
-#### 4.1. Planning:
+### 4. Technologies, Tools, and Frameworkes:
+This project leverages a variety of open-source technologies (Dagster and dbt) and cloud services (GCP, AWS and Azure), with Python and SQL being the major programming languages. The final application is running on Docker to ensure scalability.
 
-#### 4.2. Extract:
+![activeTix](https://github.com/khoinguyenvo/Porfolio/assets/133230440/c5faa94d-b56d-4d25-a8dc-d874f25af15c)
+
+### 5. Approach:
+#### 5.1. Planning:
+
+#### 5.2. Extract:
 ##### As mentioned above, the data source I was working with is a collection of JSON files in an AWS S3 bucket, some of them were heavily nested. I had two options:
 - Build a fully managed pipeline with AWS Glue and AWS Crawler, then create a databse using AWS Athena. Or if I had wanted to have more flexibility, I could have built used AWS Lambda function.
 - Code a pipeline with Python and open-source tools.
@@ -101,7 +104,7 @@ class S3Ops:
         return df
 ```
 
-#### 4.3. Load:
+#### 5.3. Load:
 Once the DataFrame was created, basic transformations such as data type conversion, duplicate and null value removal were executed. Subsequently, the transformed DataFrame was loaded into the target table in BigQuery utilizing a method from the Google APIs. It's worth mentioning that I used Dagster MaterializeResult class to generate a graph illustrating the total rows loaded during each run. This enabled me to track day-over-day changes effectively.
 
 ```Python
@@ -122,19 +125,24 @@ def raw_sale_orders(context: AssetExecutionContext) -> MaterializeResult:
         context.log.info(f"Total rows {data.shape[0]}")
     return MaterializeResult(metadata={"number_of_rows": data.shape[0]})
 ```
-#### 4.4. Transform:
+#### 5.4. Transform:
 In this project I chose Data Build Tool (dbt) for the transformation part for a number of reasons:
 - SQL!
 - dbt makes it extremely easy to document my models, including the source and target schema, the data integrity checks, and the compiled query behind it.
 - Built-in data quality check.
 - Reuseable macros.
+- With dbt I was able to easily apply query optimization technique such as incremental load, partitioning and clustering.
+- Dagster has a built-in integrated API to orchestrate dbt projects alongside other technologies, including Python.
 
-### 5. Technologies, Tools, and Frameworkes:
-This project leverages a variety of open-source technologies (Dagster and dbt) and cloud services (GCP, AWS and Azure), with Python and SQL being the major programming languages. The final application is running on Docker to ensure scalability.
+#### 5.5. Deployment to production:
+The entire pipeline was orchestrated and scheduled by Dagster, guaranteeing that each task/job within the pipeline was executed at the appropriate time, in the correct sequence, and under the right conditions. Following this, the completed pipeline was containerized into a Docker image for deployment on an Oracle virtual machine instance.
 
-![activeTix](https://github.com/khoinguyenvo/Porfolio/assets/133230440/c5faa94d-b56d-4d25-a8dc-d874f25af15c)
+### 6. Conclusion:
+This marks my inaugural end-to-end data engineering project since transitioning into the data field in 2023, and I'm immensely satisfied with the final outcome. Despite running smoothly for the past few months, I acknowledge there's ample room for improvement, particularly in areas such as CI/CD implementation and version controls, as well as enhancing the depth of data quality checks. Nevertheless, considering my relatively short tenure of six months in the field and the majority of my knowledge and skills acquired through self-study, I view this project as a significant accomplishment.
 
-### 6. Github repository:
+If you have read this far and have any comments or recommendations for me, please feel free to contact me via my email [Khoi Nguyen (Neil) Vo](mailto:vknguyen1409@gmail.com?subject=[GitHub]%20Source%20Han%20Sans), 
+ or connect with me on [Linkedin](https://www.linkedin.com/in/neil-vo/). Thank you! 🙂
+
+### 7. Github repository:
 [Project 1 - Online Ticketing Platform - Data Pipeline](https://github.com/khoinguyenvo/Porfolio/tree/43fd579549de6aa6ee7cce5cc29fddbea419636d/Project%201)
-<details>
 
