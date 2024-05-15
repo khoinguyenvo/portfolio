@@ -1,7 +1,8 @@
 # Porfolio
 Greetings! My name is Neil, a data enthusiast. Welcome to my Github repository showcasing a compilation of major projects reflecting my journey and expertise in the realm of business intelligence and data engineering. Within this repositoy, you will find a diversity of projects I have put together throughout my data professional career, from building robust data pipelines, designing databased to crafting insightful business dashboards. Wether you're a fellow data enthusiast, a potential employer, or simply curios about the possibilities of data, please feel free to explore and reach out with any questions or opportunities for collaboration. 🙂
 
-## PROJECT 1: TICKETING PLATFORM DATA PIPELINES
+<details>
+<summary> PROJECT 1: ONLINE TICKETING PLATFORM - DATA PIPELINES </summary>
 
 ### 1. Background:
 This is a project I did for a company specializing in online ticket sales, catering to sports and recreational events. While the initial database architecture effectively supported the platform's backend operations, this setup wasn't designed with analytical purposes in mind. Not only did data were stored scatteringly, but also the naming convention was a disaster. This lack of a standard data model hindered the company's ability to analyze the data and derive meaningful insights from it. 
@@ -145,4 +146,29 @@ If you have read this far and have any comments or recommendations for me, pleas
 
 ### 7. Github repository:
 [Project 1 - Online Ticketing Platform - Data Pipeline](https://github.com/khoinguyenvo/Porfolio/tree/43fd579549de6aa6ee7cce5cc29fddbea419636d/Project%201)
+</details>
 
+<details>
+<summary> PROJECT 2: ONLINE TICKETING PLATFORM - SALES REPORT DASHBOARD </summary>
+  
+### 1. Background:
+  
+### 2. Objective:
+The primary objective of this dashboard is to track the sales performance across the platform and provide insightful analysis to aid stakeholders in making informed decisions.
+  
+### 3. Technique:
+Some notable features and techniques I incorporated include:
+- Dynamic titles, subtitles, tooltips, filters and conditional formatting.
+- Visualizing comparisons using SVG images and the New card visual.
+- Toggle buttons that switch between bookmarks for enhanced context.
+- Dynamic moving averages based on the selected period.
+### 4. Github repository & Dashboard Link:
+
+[Project 2 - Online Ticketing Platform - Sales Report Dashboard](https://github.com/khoinguyenvo/Porfolio/tree/main/Project%202)
+
+[Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWUzZTcwYmYtMWJlNS00ZmY1LWJlZDQtOGU4Y2EzYTc4MTZlIiwidCI6IjYxYTUzMDU4LTlkNDEtNDg5ZS04NGRlLTM3ODg3MzBhMzgxYyIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
+
+![Page1](https://github.com/khoinguyenvo/Porfolio/blob/main/Project%202/activeTix%20dashboard%20-%20page%201.png)
+
+![Page2](https://github.com/khoinguyenvo/Porfolio/blob/main/Project%202/activeTix%20dashboard%20-%20page%202.png)
+</details>
