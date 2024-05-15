@@ -1,0 +1,354 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 384.16936168383859,
+            "y": 0
+          },
+          "nodeIndex": "Dim: Customers",
+          "nodeLineageTag": "393f3a81-521e-444c-8472-91cb0e6c4405",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 172.4834741766565,
+            "y": 700.71234918559469
+          },
+          "nodeIndex": "Dim: Events",
+          "nodeLineageTag": "a2d50dfd-fa74-49ea-abc0-7c563bfacb6f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 660.76572930271527,
+            "y": 344.68063819052651
+          },
+          "nodeIndex": "Dim: Tickets",
+          "nodeLineageTag": "162c73fe-6c1a-4661-8760-5686280eb05f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 19
+        },
+        {
+          "location": {
+            "x": 385.92628394652382,
+            "y": 347.24541769707218
+          },
+          "nodeIndex": "Fact: Orders",
+          "nodeLineageTag": "8ede34bc-6ce7-446b-a843-2b5661c91d88",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 135.56099862118151
+          },
+          "nodeIndex": "Dim: Calendar",
+          "nodeLineageTag": "3de9cc54-fa79-41b4-b39a-494712dc4219",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 1551.3709893119199,
+            "y": 234.77450365386983
+          },
+          "nodeIndex": "Param: Day Period Slicer",
+          "nodeLineageTag": "f4c498a1-f958-4e38-920c-473f495e9e67",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 23
+        },
+        {
+          "location": {
+            "x": 1944.560660595278,
+            "y": 101.44825735862668
+          },
+          "nodeIndex": "2. Summary",
+          "nodeLineageTag": "55cca059-02aa-4b0c-9216-078cf9e582df",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 10,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1945.5275096976604,
+            "y": 188.69011975199567
+          },
+          "nodeIndex": "3. Sales",
+          "nodeLineageTag": "7c0213c3-f4e9-4a5f-b7d8-b3d6e1870c45",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 11,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1946.1665633419839,
+            "y": 276.43417619856439
+          },
+          "nodeIndex": "4  Customers",
+          "nodeLineageTag": "d6b0d794-3cce-4615-821b-364f82428a1c",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 12,
+          "expandedHeight": 104
+        },
+        {
+          "location": {
+            "x": 1945.8781300587805,
+            "y": 361.50243416172725
+          },
+          "nodeIndex": "5. Color",
+          "nodeLineageTag": "99fa7c40-efc1-4a7e-8d4a-eb7c7a176d71",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 13,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1946.5817399591861,
+            "y": 449.91463053533249
+          },
+          "nodeIndex": "6. SVG Image",
+          "nodeLineageTag": "d3138686-6e29-4bd6-925c-4145c290bd31",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 14,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1947.2101278255739,
+            "y": 534.53548550678954
+          },
+          "nodeIndex": "7. Title & Subtitle",
+          "nodeLineageTag": "4697f9c0-ff12-4947-85d1-34e0dd33104d",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 15,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1944.3382259169366,
+            "y": 11.580535622974679
+          },
+          "nodeIndex": "1. Core Measures",
+          "nodeLineageTag": "6c290237-0ace-421e-9e78-2193065f88d3",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 24,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1218.3102248811217,
+            "y": 235.61500920008018
+          },
+          "nodeIndex": "Param: Summary Metrics Slicer",
+          "nodeLineageTag": "eff97636-155e-46ce-8120-9716a298f1de",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1218.1349147005617,
+            "y": 10.980314672545092
+          },
+          "nodeIndex": "Param: Summary Metrics",
+          "nodeLineageTag": "27b13697-3ca8-4c59-bb7f-63322ab9ba66",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1551.8376362306935,
+            "y": 419.86283715364107
+          },
+          "nodeIndex": "Param: Daily moving average",
+          "nodeLineageTag": "3073f865-f935-46dc-8e2f-109c17972d25",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 25
+        },
+        {
+          "location": {
+            "x": 1213.767316107424,
+            "y": 791.7320345130496
+          },
+          "nodeIndex": "Param: Sales metrics",
+          "nodeLineageTag": "a3d0f3be-9eda-42d0-8938-0f7b07cb0c3c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 21
+        },
+        {
+          "location": {
+            "x": 1213.5920059268637,
+            "y": 1018.5796707709487
+          },
+          "nodeIndex": "Param: Sales metrics slicer",
+          "nodeLineageTag": "c3655908-7bcb-4d61-b996-780159e2fc3d",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 22
+        },
+        {
+          "location": {
+            "x": 1551.549202947491,
+            "y": 593.15232152756778
+          },
+          "nodeIndex": "Param: Monthly moving average",
+          "nodeLineageTag": "7ae1f649-e41a-4e38-97d5-75e7028d0016",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 665.29770193182685,
+            "y": 0
+          },
+          "nodeIndex": "Dim: Ticket phase",
+          "nodeLineageTag": "68dd11d8-1930-4ebd-8af3-2d48c70d825c",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1553.9239776375248,
+            "y": 1020.8918436911363
+          },
+          "nodeIndex": "Param: Scatter X",
+          "nodeLineageTag": "e8096f0e-a360-416f-9051-fce7395e6d76",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1554.0992878180855,
+            "y": 791.86683933159929
+          },
+          "nodeIndex": "Param: Scatter Y",
+          "nodeLineageTag": "91468137-20dd-4068-b6cd-ee9ef3de266b",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1548.5811823438237,
+            "y": 10.625377409169687
+          },
+          "nodeIndex": "Param: Scatter size",
+          "nodeLineageTag": "54a7426e-02be-4253-9535-d4a88f84daf1",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1214.1179364685443,
+            "y": 416.67558718834351
+          },
+          "nodeIndex": "Param: Scatter Cluster Color",
+          "nodeLineageTag": "762df857-a570-4949-9699-46d6f9442496",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1213.9426262879842,
+            "y": 595.52322344624281
+          },
+          "nodeIndex": "Param: Scatter Legends",
+          "nodeLineageTag": "7e9451ce-2975-4c30-b545-76630a9b2e59",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 7
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 70,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

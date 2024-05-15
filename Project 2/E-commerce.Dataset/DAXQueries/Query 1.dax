@@ -1,0 +1,11 @@
+EVALUATE
+	TOPN(
+		5,
+		SUMMARIZE(
+			'Fact: Orders',
+			'Fact: Orders'[eventID],
+			'Dim: Events'[name]
+		),
+		[New Customers],
+		DESC
+	)
