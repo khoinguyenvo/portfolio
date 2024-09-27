@@ -28,7 +28,7 @@ The second most significant constrain I encountered was that the new data would 
 
 Last on the list is the communication with the stakeholders, which is a common challenge faced by many other data engineers.  
 
-### 4. Technologies, Tools, and Frameworkes:
+### 4. Technologies, Tools, and Frameworks:
 This project leverages a variety of open-source technologies (Dagster and dbt) and cloud services (GCP, AWS and Azure), with Python and SQL being the major programming languages. The final application is running on Docker to ensure scalability.
 
 ![activeTix](https://github.com/khoinguyenvo/Porfolio/assets/133230440/c5faa94d-b56d-4d25-a8dc-d874f25af15c)
