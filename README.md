@@ -19,7 +19,7 @@ This is a project I did for a company specializing in online ticket sales, cater
 - tracks daily sales performace by monitoring sales KPIs and key financial metrics.
 - presents an analysis of customers behaviour and segmentation.
   
-### 3. Constrains & Challenges:
+### 3. Constraints & Challenges:
 It's worth metioning the constraints and challenges I encountered before and during the project because they are the decisive factors of the approach I adopted.
 
 First among them was the dependency on the head DevOps of the company for the access to the raw data. In particular, I was restricted from directly acessing the company's transactional database stored in MySQL. Instead, the head DevOps would dump each entire table from the database into JSON files, before uploading them to an AWS S3 bucket and overwriting the existing files. This constrain made micro-batch processing and incremental loading almost impossible. I needed to come up with a workaround that had to be memory-efficient and scalable when the size of those JSON files grew.
